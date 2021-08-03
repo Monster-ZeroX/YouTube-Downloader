@@ -11,7 +11,7 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH")
 
     # Array to store users who are authorized to use the bot
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
+    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", None).split())
 
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
@@ -24,17 +24,17 @@ class Config(object):
 
     # Generate screenshots for file after uploading
     # Defaults to True
-    SCREENSHOTS = os.environ.get("SCREENSHOTS", "True")
+    SCREENSHOTS = os.environ.get("SCREENSHOTS", "False")
 
     # default thumbnail to be used in the videos
     DEF_THUMB_NAIL_VID_S = os.environ.get("DEF_THUMB_NAIL_VID_S", None)
 
     # proxy for accessing youtube-dl in GeoRestricted Areas
     # Get your own proxy from https://github.com/rg3/youtube-dl/issues/1091#issuecomment-230163061
-    HTTP_PROXY = os.environ.get("HTTP_PROXY", "")
+    HTTP_PROXY = os.environ.get("HTTP_PROXY", None)
     
     # Update channel for Force Subscribe
-    UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
+    UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", None)
 
     # maximum message length in Telegram
     MAX_MESSAGE_LENGTH = 4096
