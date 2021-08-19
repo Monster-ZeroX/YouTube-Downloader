@@ -6,9 +6,6 @@
     "youtube",
     "downloader"
   ],
-  "success_url": "https://github.com/FayasNoushad",
-  "website": "https://fayas.cf",
-  "repository": "https://github.com/FayasNoushad/YouTube-Downloader",
   "env": {
     "WEBHOOK": {
       "description": "Leave this as it is!",
